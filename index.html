@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>DigitalControlSystems</title>
+    <title>Microwave and Antenna</title>
     <link href="https://fonts.googleapis.com/css?family=Voces" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/common.css"/>
     <link rel="stylesheet" href="css/style.css"/>
@@ -41,6 +41,8 @@
             padding-left: 0;
         }
     </style>
+    <script src="js/circuit.js"></script>
+        
 </head>
 <body>
     <div class="wrapper">
@@ -57,8 +59,74 @@
           <p class="header"><blockquote id="quoteheader">اللهم لا علم لنا الأ ما علمتنا به انك انت علام الغيوب</blockquote></p>
         </header>
     <section>
-        <h1>Introduction</h1>
-        
+        <h1>Microwave Introduction</h1>
+        Microwave devices are devices that work at high range of frequencies of 4 Ghz till ..GHz, 
+        <h2>Matching Networks</h2>
+        <h3>Old Concept of Matching</h3>
+        <p>
+        The main principle of matching network we have already passed through it while studying thevenin when you 
+        were trying where we proved that to find maximum power transfer we found that load impedance must be equal to
+        conjugate of source impedance
+        </p>
+        <figure>
+            <img src="images/matching.JPG"/>
+            <figcaption>Matching Impedance</figcaption>
+        </figure>
+        <h3>Why choosing source impedance =50ohms?</h3>
+        <p>
+        what limits power on wave guide is it will melt which we call it breakdown, we found that max power is at impedance
+        of 30 ohms and min losses at 75 ohms in case we are using a coaxial cable air-filled so we take geometric mean 
+        of both quantities which equals 50ohms which is a standard that we usually use in antennas, filters,....and
+        all microwave devices
+        </p>
+        <figure>
+            <img src="images/characteristicimpedance.JPG"/>
+            <figcaption>Characteristic Impedance</figcaption>
+        </figure>
+        <h3>Matching using Lumped Components for a resistive load</h3>
+        <p>
+            we are trying to find matching network using lumped elements elements so we found that we have two options whether
+            to use resistive matching where its pros that we are not limiting bandwidth range of the source but its cons that
+            it will consume much power we are not using it as it doesn't go to the load while if we use LC-Components we will
+            be limited by a certain bandwidth range but ideally we won't lose much power, what we mean by lumped components is
+            it has fixed dimensions that we cannot control.
+        </p>
+        <figure>
+            <img src="images/matchingnetworkpros.JPG"/>
+            <figcaption>Matching Network pros/cons</figcaption>
+        </figure>
+        <p>
+            After solving equations in order to find value for values of matching network component parameters in case you
+            are using resistive network it will be equal to geometric mean of load resistance and source resistance but 
+            in case we are using LC-components then we will have two cases when load resistance is larger than source resistance
+            and when it is smaller like in image below where \(r_L ={ R_{load} \over R_{source} }\). where solving equation
+            is done by getting \(Z_{in}\) equation and equating it with \(R_S\) so we will have two equations, one for real
+            and one for imag. and solving them to find L,C values
+        </p>
+        <figure>
+            <img src="images/matchingwithlsection.png"/>
+            <figcaption>Matching with LC-network where we have a load resistance</figcaption>
+        </figure>
+        <figure>
+            <img src="images/gammasection.JPG"/>
+            <figcaption>LC Section Lumped Matching Network for resistive load</figcaption>
+        </figure>
+        <h3>Matching using Lumped Components for a complex load</h3>
+        <h3>Immitance</h3>
+        <p>
+            positive reactance ====> inductive<br/>
+            negative reactance ====> Capacitive<br/>
+            positive susceptance ====> inductive<br/>
+            negative susceptance ====> Capacitive
+        </p>
+        <figure>
+            <img src="images/immitance.JPG"/>
+            <figcaption>Immitance</figcaption>
+        </figure>
+        <h2>Power Dividers\Combiners</h2>
+
+        <h2>Filters</h2>
+                
     </section>
 <footer>
     <p><small>Hosted on <a href="https://www.github.com/hishamelreedy/">GitHub Pages</a> by HishamElreedy</small></p>
