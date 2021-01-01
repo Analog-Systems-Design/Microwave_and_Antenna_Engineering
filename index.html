@@ -101,7 +101,8 @@
             in case we are using LC-components then we will have two cases when load resistance is larger than source resistance
             and when it is smaller like in image below where \(r_L ={ R_{load} \over R_{source} }\). where solving equation
             is done by getting \(Z_{in}\) equation and equating it with \(R_S\) so we will have two equations, one for real
-            and one for imag. and solving them to find L,C values
+            and one for imag. and solving them to find L,C values also there is another method for matching which is using
+            transformer but it works only for a resistive load also it has effect of producing inductance from transformer coil
         </p>
         <figure>
             <img src="images/matchingwithlsection.png"/>
@@ -123,12 +124,18 @@
             <img src="images/immitance.JPG"/>
             <figcaption>Immitance</figcaption>
         </figure>
+        <h3>Bandwidth</h3>
         <p>
             In communication systems when we are sending data we need to modulate the carrier signal with the message so when we
             are sending the transmitted signal we don't have only the carrier signal tone we have a certain bandwidth that was defined
             by the message when it was modulated at the carrier tone so when we design matching we need not to consider only the carrier
-            tone but we need also to consider message bandwidth
+            tone but we need also to consider message bandwidth, bandwidth is defined in system requirements like 90% at center freq.
+            Bw=1.1*f1-0.9f1=0.2*f1
         </p>
+        <figure>
+            <img src="images/bandwidth.JPG"/>
+            <figcaption>90% Bandwidth</figcaption>
+        </figure>
         <h2>Power Dividers\Combiners</h2>
 
         <h2>Filters</h2>
