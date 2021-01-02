@@ -61,6 +61,45 @@
     <section>
         <h1>Microwave Introduction</h1>
         Microwave devices are devices that work at high range of frequencies of 4 Ghz till ..GHz, 
+        <h2>Transmission Line theory</h2>
+        <p>
+        characteristic_impedance describes the relation between electric field and magnetic field components of the propagating
+        wave. we have already known from previous courses of electromagnetic fields that when a wave goes from medium of 
+        characteristic_impedance=\(\eta_o\) to another medium of characteristic_impedance=\(\eta_{load}\) 
+        ,part of the wave is reflected and part of it is transmitted and the amount power reflected and transmitted is determined by
+        the relation written below.<br/>
+        where, \({P_{reflected} \over P_{total}}= {{\eta_o - \eta_{load}} \over {\eta_o + \eta_{load}}}\) 
+        and, \({P_{transmitted} \over P_{total}}= {{2\eta_{load}} \over {\eta_o + \eta_{load}}}\) and, 
+        \(P_{total}=P_{reflected}+P_{transmitted}\) <br/> so to deal with a transmission line we have to consider the same case
+        because we are now dealing with transmission line theory as propagation time of the wave is very close to the periodic
+        time of the propagating wave. where in circuit theory the propagation time of the wave is very very small than the periodic
+        time of the propagating wave. like in figure below, where \(\lambda\) is the wavelength of the signal, 
+        \(\lambda={\lambda{\sqrt{\epsilon_r \mu_r}}\over{c}}\), \(c\) is the speed of light = \(3*10^8\)
+        </p>
+        <figure>
+            <img src="images/transmissionlinetheory.JPG"/>
+            <figcaption>Transmission_Line_theory</figcaption>
+        </figure>
+        <p>
+            In transmission line theory, we are now taking dimensions of circuit in our consideration for calculation
+            , where we didn't do that when we were studying electric circuits theory, that consideration made the beginning
+            of starting courses in microwaves engineering because now we are taking space in our consideration not time only
+            like in communication and electic circuit courses and that is the key difference why we were studying electromagnetic
+            fields because electromagnetic theory can literally describe anything in electric engineering field but we divided This
+            theory into a domains of validity like electric circuit & transmission line theory as show in image below 
+            like in electric circuit theory you didn't care about dimensions of inductor, resistor,..etc you were caring about
+            its value only but in this course you will take both dimensions and value in your consideration but we will assume 
+            that time is constant at \(t_o\) while we are doing our analytical calculations
+        </p>
+        <figure>
+            <img src="images/domainofvalidity.png"/>
+            <figcaption>Transmission_Line_theory</figcaption>
+        </figure>
+        <h3>Characteristic_Impedance</h3>
+        <p>
+            when we say that medium has a characteristic_impedance this means that the medium is supporting power transfer
+            between electric and Magnetic Fields.
+        </p>
         <h2>Matching Networks</h2>
         <h3>Old Concept of Matching</h3>
         <p>
